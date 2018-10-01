@@ -1,0 +1,2402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stripe.net</name>
+    </assembly>
+    <members>
+        <member name="F:Stripe.StripeEvents.AccountUpdated">
+            <summary>
+            Occurs whenever an account status or property has changed.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.AccountApplicationDeauthorized">
+            <summary>
+            Occurs whenever a user deauthorizes an application. Sent to the related application only.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.AccountExternalAccountCreated">
+            <summary>
+            Occurs whenever an external account is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.AccountExternalAccountDeleted">
+            <summary>
+            Occurs whenever an external account is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.AccountExternalAccountUpdated">
+            <summary>
+            Occurs whenever an external account is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ApplicationFeeCreated">
+            <summary>
+            Occurs whenever an application fee is created on a charge.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ApplicationFeeRefunded">
+            <summary>
+            Occurs whenever an application fee is refunded, whether from refunding a charge or from refunding the application fee directly, including partial refunds.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ApplicationFeeRefundUpdated">
+            <summary>
+            Occurs whenever an application fee refund is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.BalanceAvailable">
+            <summary>
+            Occurs whenever your Stripe balance has been updated (e.g. when a charge collected is available to be paid out). By default, Stripe will automatically transfer any funds in your balance to your bank account on a daily basis.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.BitcoinReceiverCreated">
+            <summary>
+            Occurs whenever a receiver has been created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.BitcoinReceiverFilled">
+            <summary>
+            Occurs whenever a receiver is filled (that is, when it has received enough bitcoin to process a payment of the same amount).
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.BitcoinReceiverUpdated">
+            <summary>
+            Occurs whenever a receiver is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.BitcoinReceiverTransactionUpdated">
+            <summary>
+            Occurs whenever bitcoin is pushed to a receiver.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeCaptured">
+            <summary>
+            Occurs whenever a previously uncaptured charge is captured.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeFailed">
+            <summary>
+            Occurs whenever a failed charge attempt occurs.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargePending">
+            <summary>
+            Occurs whenever a pending charge is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeRefundUpdated">
+            <summary>
+            Occurs whenever a refund is updated on selected payment methods.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeRefunded">
+            <summary>
+            Occurs whenever a charge is refunded, including partial refunds.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeSucceeded">
+            <summary>
+            Occurs whenever a new charge is created and is successful.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeUpdated">
+            <summary>
+            Occurs whenever a charge description or metadata is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeDisputeClosed">
+            <summary>
+            Occurs when the dispute is closed and the dispute status changes to charge_refunded, lost, warning_closed, or won.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeDisputeCreated">
+            <summary>
+            Occurs whenever a customer disputes a charge with their bank (chargeback).
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeDisputeFundsReinstated">
+            <summary>
+            Occurs when funds are reinstated to your account after a dispute is won.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeDisputeFundsWithdrawn">
+            <summary>
+            Occurs when funds are removed from your account due to a dispute.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ChargeDisputeUpdated">
+            <summary>
+            Occurs when the dispute is updated (usually with evidence).
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CouponCreated">
+            <summary>
+            Occurs whenever a coupon is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CouponDeleted">
+            <summary>
+            Occurs whenever a coupon is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CouponUpdated">
+            <summary>
+            Occurs whenever a coupon is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerCreated">
+            <summary>
+            Occurs whenever a new customer is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerDeleted">
+            <summary>
+            Occurs whenever a customer is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerUpdated">
+            <summary>
+            Occurs whenever any property of a customer changes.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerDiscountCreated">
+            <summary>
+            Occurs whenever a coupon is attached to a customer.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerDiscountDeleted">
+            <summary>
+            Occurs whenever a customer's discount is removed.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerDiscountUpdated">
+            <summary>
+            Occurs whenever a customer is switched from one coupon to another.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSourceCreated">
+            <summary>
+            Occurs whenever a new source is created for the customer.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSourceDeleted">
+            <summary>
+            Occurs whenever a source is removed from a customer.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSourceExpiring">
+            <summary>
+            Occurs whenever a source will expire at the end of the month.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSourceUpdated">
+            <summary>
+            Occurs whenever a source's details are changed.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSubscriptionCreated">
+            <summary>
+            Occurs whenever a customer with no subscription is signed up for a plan.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSubscriptionDeleted">
+            <summary>
+            Occurs whenever a customer ends their subscription.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSubscriptionTrialWillEnd">
+            <summary>
+            Occurs three days before the trial period of a subscription is scheduled to end.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.CustomerSubscriptionUpdated">
+            <summary>
+            Occurs three days before the trial period of a subscription is scheduled to end.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceCreated">
+            <summary>
+            Occurs whenever a new invoice is created. If you are using webhooks, Stripe will wait one hour after they have all succeeded to attempt to pay the invoice; the only exception here is on the first invoice, which gets created and paid immediately when you subscribe a customer to a plan. If your webhooks do not all respond successfully, Stripe will continue retrying the webhooks every hour and will not attempt to pay the invoice. After 3 days, Stripe will attempt to pay the invoice regardless of whether or not your webhooks have succeeded.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoicePaymentFailed">
+            <summary>
+            Occurs whenever an invoice attempts to be paid, and the payment fails. This can occur either due to a declined payment, or because the customer has no active card. A particular case of note is that if a customer with no active card reaches the end of its free trial, an invoice.payment_failed notification will occur.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoicePaymentSucceeded">
+            <summary>
+            Occurs whenever an invoice attempts to be paid, and the payment succeeds.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceSent">
+            <summary>
+            Occurs whenever an invoice email is sent out.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceUpcoming">
+            <summary>
+            Occurs X number of days before a subscription is scheduled to create an invoice that is charged automatically, where X is determined by your subscriptions settings.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceUpdated">
+            <summary>
+            Occurs whenever an invoice changes (for example, the amount could change).
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceItemCreated">
+            <summary>
+            Occurs whenever an invoice item is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceItemDeleted">
+            <summary>
+            Occurs whenever an invoice item is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.InvoiceItemUpdated">
+            <summary>
+            Occurs whenever an invoice item is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingAuthorizationCreated">
+            <summary>
+            Occurs whenever an issuing authorization is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingAuthorizationRequest">
+            <summary>
+            Occurs whenever an issuing authorization request is sent.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingAuthorizationUpdated">
+            <summary>
+            Occurs whenever an issuing authorization is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingCardCreated">
+            <summary>
+            Occurs whenever an issuing card is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingCardUpdated">
+            <summary>
+            Occurs whenever an issuing card is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingCardholderCreated">
+            <summary>
+            Occurs whenever an issuing cardholder is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingCardholderUpdated">
+            <summary>
+            Occurs whenever an issuing cardholder is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingDisputeCreated">
+            <summary>
+            Occurs whenever an issuing dispute is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingDisputeUpdated">
+            <summary>
+            Occurs whenever an issuing dispute is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingTransactionCreated">
+            <summary>
+            Occurs whenever an issuing transaction is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.IssuingTransactionUpdated">
+            <summary>
+            Occurs whenever an issuing transaction is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.OrderCreated">
+            <summary>
+            Occurs whenever an order is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.OrderPaymentFailed">
+            <summary>
+            Occurs whenever payment is attempted on an order, and the payment fails.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.OrderPaymentSucceeded">
+            <summary>
+            Occurs whenever payment is attempted on an order, and the payment succeeds.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.OrderUpdated">
+            <summary>
+            Occurs whenever an order is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.OrderReturnCreated">
+            <summary>
+            Occurs whenever an order return is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PayoutCanceled">
+            <summary>
+            Occurs whenever a payout is canceled.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PayoutCreated">
+            <summary>
+            Occurs whenever a new payout is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PayoutFailed">
+            <summary>
+            Occurs whenever Stripe attempts to send a payout and that transfer fails.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PayoutPaid">
+            <summary>
+            Occurs whenever a payout is expected to be available in the destination bank account. If the payout failed, a payout.failed webhook will additionally be sent at a later time.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PayoutUpdated">
+            <summary>
+            Occurs whenever the metadata of a payout is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PlanCreated">
+            <summary>
+            Occurs whenever a plan is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PlanDeleted">
+            <summary>
+            Occurs whenever a plan is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.PlanUpdated">
+            <summary>
+            Occurs whenever a plan is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ProductCreated">
+            <summary>
+            Occurs whenever a product is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ProductDeleted">
+            <summary>
+            Occurs whenever a product is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ProductUpdated">
+            <summary>
+            Occurs whenever a product is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.RecipientCreated">
+            <summary>
+            Occurs whenever a recipient is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.RecipientDeleted">
+            <summary>
+            Occurs whenever a recipient is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.RecipientUpdated">
+            <summary>
+            Occurs whenever a recipient is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ReviewClosed">
+            <summary>
+            Occurs whenever a review is closed. The review's reason field will indicate why the review was closed (e.g. approved, refunded, refunded_as_fraud, disputed.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.ReviewOpened">
+            <summary>
+            Occurs whenever a review is opened.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SkuCreated">
+            <summary>
+            Occurs whenever a SKU is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SkuDeleted">
+            <summary>
+            Occurs whenever a SKU is deleted.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SkuUpdated">
+            <summary>
+            Occurs whenever a SKU is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SourceCanceled">
+            <summary>
+            Occurs whenever a source is canceled.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SourceChargeable">
+            <summary>
+            Occurs whenever a source transitions to chargeable.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SourceFailed">
+            <summary>
+            Occurs whenever a source is failed.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.SourceTransactionCanceled">
+            <summary>
+            Occurs whenever a source transaction is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.TransferCreated">
+            <summary>
+            Occurs whenever a new transfer is created.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.TransferReversed">
+            <summary>
+            Occurs whenever a transfer is reversed, including partial reversals.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.TransferUpdated">
+            <summary>
+            Occurs whenever the description or metadata of a transfer is updated.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeEvents.Ping">
+            <summary>
+            May be sent by Stripe at any time to see if a provided webhook URL is working.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeTransferMethod.Standard">
+            <summary>
+            Standard is the default method.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeTransferMethod.Instant">
+            <summary>
+            Only supported for transfers to debit cards.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCodeVerification.AttemptsRemaining">
+            <summary>
+            The number of attempts remaining to authenticate the source object with a verification code.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCodeVerification.Status">
+            <summary>
+            The status of the code verification, either pending, succeeded or failed.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.Address">
+            <summary>
+            Owner’s address.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.Email">
+            <summary>
+            Owner’s email address.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.Name">
+            <summary>
+            Owner’s full name.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.Phone">
+            <summary>
+            Owner’s phone number (including extension).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.VerifiedAddress">
+            <summary>
+            Verified owner's address.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.VerifiedEmail">
+            <summary>
+            Verified owner’s email address.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.VerifiedName">
+            <summary>
+            Verified owner’s full name.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOwner.VerifiedPhone">
+            <summary>
+            Verified owner’s phone number (including extension).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReceiver.Address">
+            <summary>
+            The address of the receiver source. This is the value that should be communicated to the customer to send their funds to.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReceiver.AmountCharged">
+            <summary>
+            The total amount charged by you. The amount charged is expressed in the source’s currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReceiver.AmountReceived">
+            <summary>
+            The total amount received by the receiver source. AmountReceived = AmountReturned + AmountCharged is true at all times. The amount received is expressed in the source’s currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReceiver.AmountReturned">
+            <summary>
+            The total amount that was returned to the customer. The amount returned is expressed in the source’s currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeRedirect.FailureReason">
+            <summary>
+            The failure reason for the redirect. One of <see cref="T:Stripe.StripeRedirectFailureReason" />.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeRedirect.ReturnUrl">
+            <summary>
+            The URL you provide to redirect the customer to after they authenticated their payment.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeRedirect.Status">
+            <summary>
+            The status of the redirect, either not_required, pending, succeeded or failed.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeRedirect.Url">
+            <summary>
+            The URL provided to you to redirect a customer to as part of a redirect authentication flow.
+            </summary>
+        </member>
+        <member name="T:Stripe.StripeSource">
+            <summary>
+            Source objects allow you to accept a variety of payment methods. They represent a customer's payment instrument and can be used with the Stripe API just like a card object: once chargeable, they can be charged, or attached to customers.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Amount">
+            <summary>
+            Amount associated with the source. This is the amount for which the source will be chargeable once ready. Required for single-use sources.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.ClientSecret">
+            <summary>
+            The client secret of the source. Used for client-side polling using a publishable key.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.CodeVerification">
+            <summary>
+            Information related to the code verification flow. Present if the source is authenticated by a verification code (flow is code_verification).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Currency">
+            <summary>
+            The currency associated with the source. This is the currency for which the source will be chargeable once ready. Required for single-use sources.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Customer">
+            <summary>
+            The customer to which the source is attached, if any.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Flow">
+            <summary>
+            The authentication flow of the source. Flow is one of redirect, receiver, code_verification, none.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a source object. It can be useful for storing additional information about the source in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Owner">
+            <summary>
+            Information about the owner of the payment instrument that may be used or required by particular source types.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Receiver">
+            <summary>
+            Information related to the receiver flow. Present if the source is a receiver (flow is receiver).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Redirect">
+            <summary>
+            Information related to the redirect flow. Present if the source is authenticated by a redirect (flow is redirect).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.StatementDescriptor">
+            <summary>
+            Extra information about a source. This will appear on your customer’s statement every time you charge the source.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Status">
+            <summary>
+            The status of the charge, one of canceled, chargeable, consumed, failed, or pending. Only chargeable source objects can be used to create a charge.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Type">
+            <summary>
+            The type of the source. The type is a payment method, one of card, three_d_secure, giropay, sepa_debit, ideal, sofort, or bancontact.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSource.Usage">
+            <summary>
+            One of reusable, single-use. Whether this source should be reusable or not. Some source types may or may not be reusable by construction, while other may leave the option at creation. If an incompatible value is passed, an error will be returned.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.AddressLine1Check">
+            <summary>
+            If `address_line1` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.AddressZipCheck">
+            <summary>
+            If `address_zip` was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Authenticated">
+            <summary>
+            True if the cardholder went through the authentication flow and their bank indicated that authentication succeeded.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Brand">
+            <summary>
+            Card brand. Can be `American Express`, `Diners Club`, `Discover`, `JCB`, `MasterCard`, `UnionPay`, `Visa`, or `Unknown`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.CardId">
+            <summary>
+            The card used to create this 3DS source.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Country">
+            <summary>
+            Two-letter ISO code representing the country of the card.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.CustomerId">
+            <summary>
+            The ID of the customer to which the card belongs, if any.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.CvcCheck">
+            <summary>
+            If a CVC was provided, results of the check: `pass`, `fail`, `unavailable`, or `unchecked`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Description">
+            <summary>
+            This is an internal property that is not returned in standard API requests.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.DynamicLast4">
+            <summary>
+            (For tokenized numbers only.) The last four digits of the device account number.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.ExpMonth">
+            <summary>
+            The expiration month of the card.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.ExpYear">
+            <summary>
+            The expiration year of the card.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Fingerprint">
+            <summary>
+            Uniquely identifies this particular card number. You can use this attribute to check whether two customers who've signed up with you are using the same card number, for example.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Funding">
+            <summary>
+            Card funding type. Can be `credit`, `debit`, `prepaid`, or `unknown`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.IIN">
+            <summary>
+            This is an internal property that is not returned in standard API requests.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Issuer">
+            <summary>
+            This is an internal property that is not returned in standard API requests.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.Last4">
+            <summary>
+            The last 4 digits of the card number.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.ThreeDSecure">
+            <summary>
+            The card's 3D Secure support status. Can be one of `not_supported`, `required`, `recommended` or `optional`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeThreeDSecure.TokenizationMethod">
+            <summary>
+            If the card number is tokenized, this is the method that was used. Can be `apple_pay` or `android_pay`.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a 0-decimal currency) representing how much to charge. The minimum amount is $0.50 US or equivalent in charge currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.AmountRefunded">
+            <summary>
+            Amount in cents refunded (can be less than the amount attribute on the charge if a partial refund was issued).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.ApplicationFee">
+            <summary>
+            The application fee (if any) for the charge. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.BalanceTransactionId">
+            <summary>
+            ID of the balance transaction that describes the impact of this charge on your account balance (not including refunds or disputes).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Captured">
+            <summary>
+            If the charge was created without capturing, this boolean represents whether or not it is still uncaptured or has since been captured.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Currency">
+            <summary>
+            Three-letter ISO currency code representing the currency in which the charge was made.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.CustomerId">
+            <summary>
+            ID of the customer this charge is for if one exists.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Destination">
+            <summary>
+            The account (if any) the charge was made on behalf of, with an automatic transfer. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Dispute">
+            <summary>
+            Details about the dispute if the charge has been disputed.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.FailureCode">
+            <summary>
+            Error code explaining reason for charge failure if available (see the errors section for a list of codes).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.FailureMessage">
+            <summary>
+            Message to user further explaining reason for charge failure if available.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.FraudDetails">
+            <summary>
+            Hash with information on fraud assessments for the charge. Assessments reported by you have the key user_report and, if set, possible values of safe and fraudulent. Assessments from Stripe have the key stripe_report and, if set, the value fraudulent.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.InvoiceId">
+            <summary>
+            ID of the invoice this charge is for if one exists.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a charge object. It can be useful for storing additional information about the charge in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.OnBehalfOfId">
+            <summary>
+            The account (if any) the charge was made on behalf of without triggering an automatic transfer. See the Connect documentation for details.
+            <para>To populate the OnBehalfOf entity, you need to set ExpandOnBehalfOf to true on your service before invoking a service method.</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.OrderId">
+            <summary>
+            ID of the order this charge is for if one exists.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Level3">
+            <summary>
+            Details about the level III data associated with the Charge.
+            This is a gated property and most integrations can not access it.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Outcome">
+            <summary>
+            Details about whether the payment was accepted, and why.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Paid">
+            <summary>
+            true if the charge succeeded, or was successfully authorized for later capture.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.ReceiptEmail">
+            <summary>
+            This is the email address that the receipt for this charge was sent to.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.ReceiptNumber">
+            <summary>
+            This is the transaction number that appears on email receipts sent for this charge.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Refunded">
+            <summary>
+            Whether or not the charge has been fully refunded. If the charge is only partially refunded, this attribute will still be false.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Refunds">
+            <summary>
+            A list of refunds that have been applied to the charge.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.ReviewId">
+            <summary>
+            ID of the review associated with this charge if one exists.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Shipping">
+            <summary>
+            Shipping information for the charge.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Source">
+            <summary>
+            For most Stripe users, the source of every charge is a credit or debit card. This hash is then the card object describing that card.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.SourceTransferId">
+            <summary>
+            The transfer ID which created this charge. Only present if the charge came from another Stripe account. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.StatementDescriptor">
+            <summary>
+            Extra information about a charge. This will appear on your customer’s credit card statement.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.Status">
+            <summary>
+            The status of the payment is either succeeded, pending, or failed
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.TransferId">
+            <summary>
+            ID of the transfer to the destination account (only applicable if the charge was created using the destination parameter).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCharge.TransferGroup">
+            <summary>
+            A string that identifies this transaction as part of a group. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.AccountBalance">
+            <summary>
+            Current balance, if any, being stored on the customer’s account. If negative, the customer has credit to apply to the next invoice. If positive, the customer has an amount owed that will be added to the next invoice. The balance does not refer to any unpaid invoices; it solely takes into account amounts that have yet to be successfully applied to any invoice. This balance is only taken into account for recurring billing purposes (i.e., subscriptions, invoices, invoice items)
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.CustomerBankAccounts">
+            <summary>
+            Warning: this is not in the documentation
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Currency">
+            <summary>
+            The currency the customer can be charged in for recurring billing purposes
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.DefaultCustomerBankAccountId">
+            <summary>
+            Warning: this is not in the documentation
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.DefaultCustomerBankAccount">
+            <summary>
+            Warning: this is not in the documentation
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.DefaultSourceId">
+            <summary>
+            ID of the default source attached to this customer
+            <para>You can expand the DefaultSource by setting the ExpandDefaultSource property on the service to true</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.DefaultSourceType">
+            <summary>
+            Warning: this is not in the documentation
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Deleted">
+            <summary>
+            Warning: this is not in the documentation
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Delinquent">
+            <summary>
+            Whether or not the latest charge for the customer’s latest invoice has failed
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.StripeDiscount">
+            <summary>
+            Describes the current discount active on the customer, if there is one
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a customer object. It can be useful for storing additional information about the customer in a structured format
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Sources">
+            <summary>
+            The customer’s payment sources, if any
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeCustomer.Subscriptions">
+            <summary>
+            The customer’s current subscriptions, if any
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeDeliveryEstimate.Date">
+            <summary>
+            If type is "exact", date will be the expected delivery date in the format YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeDeliveryEstimate.Earliest">
+            <summary>
+            If type is "range", earliest will be be the earliest delivery date in the format YYYY-MM-DD.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeDeliveryEstimate.Latest">
+            <summary>
+            If type is "range", latest will be the latest delivery date in the format YYYY-MM-DD
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeDeliveryEstimate.Type">
+            <summary>
+            The type of estimate. Must be either "range" or "exact".
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.Object">
+            <summary>
+            String representing the object’s type. Objects of the same type share the same value.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.Created">
+            <summary>
+            Time at which the object was created.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.Expired">
+            <summary>
+            Whether this link is already expired.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.ExpiresAt">
+            <summary>
+            Time at which the link expires.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.LiveMode">
+            <summary>
+            Has the value <code>true</code> if the object exists in live mode or the value
+            <code>false</code> if the object exists in test mode.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.FileId">
+            <summary>
+            ID of the file object this link points to.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.File">
+            <summary>
+            The file object this link points to (if expanded).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.Metadata">
+            <summary>
+            Set of key-value pairs that you can attach to an object. This can be useful for storing
+            additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLink.Url">
+            <summary>
+            The publicly accessible URL to download the file.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoice.Billing">
+            <summary>
+            One of <see cref="T:Stripe.StripeBilling" />. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoice.DueDate">
+            <summary>
+            The date on which payment for this invoice is due. This value will be null for invoices where billing=charge_automatically.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoice.Number">
+            <summary>
+            A unique, identifying string that appears on emails sent to the customer for this invoice.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeLegalEntity.BusinessTaxIdProvided">
+            <summary>
+            Whether the business ID number of the legal entity has been provided.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeLegalEntity.BusinessVatIdProvided">
+            <summary>
+            Whether the business VAT number of the legal entity has been provided.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeList`1.HasMore">
+            <summary>
+            This field is only valid in the context of paging.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency) representing the total amount for the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Application">
+            <summary>
+            ID of the Connect Application that created the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.ChargeId">
+            <summary>
+            <para>The ID of the payment used to pay for the order. Present if the order status is paid, fulfilled, or refunded.</para>
+            <para>Expandable</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Created">
+            <summary>
+            Time at which the object was created.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Currency">
+            <summary>
+            3-letter ISO code representing the currency in which the order was made.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.CustomerId">
+            <summary>
+            The customer used for the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Email">
+            <summary>
+            The email address of the customer placing the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.OrderItems">
+            <summary>
+            List of items constituting the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to an order object. It can be useful for storing additional information about the order in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.SelectedShippingMethod">
+            <summary>
+            The shipping method that is currently selected for this order, if any. If present, it is equal to one of the ids of shipping methods in the shipping_methods array. At order creation time, if there are multiple shipping methods, Stripe will automatically selected the first method.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Shipping">
+            <summary>
+            The shipping address for the order. Present if the order is for goods to be shipped.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.ShippingMethods">
+            <summary>
+            A list of supported shipping methods for this order. The desired shipping method can be specified either by updating the order, or when paying it.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.Status">
+            <summary>
+            Current order status. One of created, paid, canceled, fulfilled, or returned.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.StatusTransitions">
+            <summary>
+            The timestamps at which the order status was updated.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrder.UpstreamId">
+            <summary>
+            The merchant’s order ID if it is different from the Stripe order ID.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency) representing the total amount for the line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Currency">
+            <summary>
+            Three-letter ISO currency code, in lowercase. Must be a supported currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Description">
+            <summary>
+            Description of the line item, meant to be displayable to the user (e.g., "Express shipping").
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Parent">
+            <summary>
+            The ID of the associated object for this line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Quantity">
+            <summary>
+            A positive integer representing the number of instances of parent that are included in this order item. Applicable/present only if type is sku.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItem.Type">
+            <summary>
+            The type of line item. One of sku, tax, shipping, or discount.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency) representing the total amount for the line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Created">
+            <summary>
+            Time at which the object was created. Measured in seconds since the Unix epoch.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Currency">
+            <summary>
+            Three-letter ISO currency code, in lowercase. Must be a supported currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Items">
+            <summary>
+            The items included in this order return.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.LiveMode">
+            <summary>
+            Flag indicating whether the object exists in live mode or test mode.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Order">
+            <summary>
+            The order that this return includes items from.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderReturn.Refund">
+            <summary>
+            The ID of the refund issued for this return.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.NetworkStatus">
+            <summary>
+            Possible values are approved_by_network, declined_by_network, not_sent_to_network, and reversed_after_approval. The value reversed_after_approval indicates the payment was blocked by Stripe after bank authorization, and may temporarily appear as “pending” on a cardholder’s statement.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.Reason">
+            <summary>
+            An enumerated value indicating a more detailed explanation of the outcome’s type. See understanding declines for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.RiskLevel">
+            <summary>
+            An enumerated value indicating a more detailed explanation of the outcome’s type. See understanding declines for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.RiskScore">
+            <summary>
+            Stripe’s evaluation of the riskiness of the payment. Possible values for evaluated payments are between 0 and 100.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.RuleId">
+            <summary>
+            The ID of the Radar rule that matched the payment, if applicable.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.SellerMessage">
+            <summary>
+            A human-readable description of the outcome type and reason, designed for you (the recipient of the payment), not your customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOutcome.Type">
+            <summary>
+            Possible values are authorized, issuer_declined, blocked, and invalid. See understanding declines for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripePayout.FailureBalanceTransactionId">
+            <summary>
+            If the payout failed or was canceled, this will be the ID of the balance transaction that reversed the initial balance transaction, and puts the funds from the failed payout back in your balance.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripePlan.ProductId">
+            <summary>
+            ID of the product linked to this plan
+            <para>You can expand the Product by setting the ExpandProduct property on the service to true</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Active">
+            <summary>
+            Whether or not the product is currently available for purchase.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Attributes">
+            <summary>
+            A list of up to 5 attributes that each SKU can provide values for (e.g. ["color", "size"]).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Caption">
+            <summary>
+            A short one-line description of the product, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Created">
+            <summary>
+            Time at which the object was created.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.DeactivateOn">
+            <summary>
+            An array of connect application identifiers that cannot purchase this product.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Description">
+            <summary>
+            The product’s description, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Images">
+            <summary>
+            A list of up to 8 URLs of images for this product, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.LiveMode">
+            <summary>
+            Flag indicating whether the object exists in live mode or test mode.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Metadata">
+            <summary>
+            Set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Name">
+            <summary>
+            The product’s name, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.PackageDimensions">
+            <summary>
+            The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own package_dimensions.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Shippable">
+            <summary>
+            Whether this product is a shipped good.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.StatementDescriptor">
+            <summary>
+            What appears on a customer's credit card statement.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Type">
+            <summary>
+            The type of the Product. Either 'good' or 'service'.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.Url">
+            <summary>
+            A URL of a publicly-accessible webpage for this product.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProduct.UnitLabel">
+            <summary>
+            This represents a unit of this product, such as a seat or API call, on customers' receipts and invoices.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReturn.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency) representing the total amount for the returned line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReturn.Currency">
+            <summary>
+            3-letter ISO code representing the currency of the return.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReturn.OrderItems">
+            <summary>
+            The items included in this order return.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReturn.OrderId">
+            <summary>
+            <para>The order that this return includes items from.</para>
+            <para>Expandable</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeReturn.RefundId">
+            <summary>
+            <para>The ID of the refund issued for this return.</para>
+            <para>Expandable</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeShippingMethod.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (that is, 100 cents for $1.00, or 1 for ¥1, Japanese Yen being a 0-decimal currency) representing the total amount for the line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeShippingMethod.Currency">
+            <summary>
+            3-letter ISO code representing the currency of the line item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeShippingMethod.DeliveryEstimate">
+            <summary>
+            The estimated delivery date for the given shipping method. Can be either a specific date or a range.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeShippingMethod.Description">
+            <summary>
+            Description of the line item, meant to be displayable to the user (e.g., "Express shipping").
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Active">
+            <summary>
+            Whether or not the SKU is available for purchase.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Attributes">
+            <summary>
+            A dictionary of attributes and values for the attributes defined by the product. If, for example, a product’s attributes are ["size", "gender"], a valid SKU has the following dictionary of attributes: {"size": "Medium", "gender": "Unisex"}.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Created">
+            <summary>
+            Time at which the object was created.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Currency">
+            <summary>
+            Three-letter ISO currency code, in lowercase. Must be a supported currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.image">
+            <summary>
+            The URL of an image for this SKU, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Inventory">
+            <summary>
+            Description of the SKU’s inventory.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.LiveMode">
+            <summary>
+            Flag indicating whether the object exists in live mode or test mode.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Metadata">
+            <summary>
+            Set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.PackageDimensions">
+            <summary>
+            The dimensions of this SKU for shipping purposes.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.Price">
+            <summary>
+            The cost of the item as a positive integer in the smallest currency unit (that is, 100 cents to charge $1.00, or 100 to charge ¥100, Japanese Yen being a 0-decimal currency).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSku.ProductId">
+            <summary>
+            The ID of the product this SKU is associated with. The product must be currently active.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscription.Billing">
+            <summary>
+            One of <see cref="T:Stripe.StripeBilling" />. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscription.DaysUntilDue">
+            <summary>
+            Number of days a customer has to pay invoices generated by this subscription. This value will be null for subscriptions where billing=charge_automatically.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (e.g., 100 cents to top up $1.00 or 100 to topup ¥100, a 0-decimal currency) representing how much to top up. The minimum amount is $0.50 US or equivalent in Top-up currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.BalanceTransactionId">
+            <summary>
+            ID of the balance transaction that describes the impact of this Top-up on your account balance (not including refunds or disputes).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.Currency">
+            <summary>
+            Three-letter ISO currency code representing the currency in which the Top-up was made.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.FailureCode">
+            <summary>
+            Error code explaining reason for topup failure if available (see the errors section for a list of codes).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.FailureMessage">
+            <summary>
+            Message to user further explaining reason for topup failure if available.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a topup object. It can be useful for storing additional information about the topup in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.Source">
+            <summary>
+            For most Stripe users, the source of every Top-up is a bank account. This hash is then the source object describing that bank account.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.StatementDescriptor">
+            <summary>
+            Extra information about a topup. This will appear on your customer’s credit card statement.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopup.Status">
+            <summary>
+            The status of the payment is either succeeded, pending, or failed
+            </summary>
+        </member>
+        <member name="T:Stripe.ISupportMetadata">
+            <summary>
+            Interface that identifies entities with a Metadata property of type <see cref="T:System.Collections.Generic.Dictionary`2" />.
+            </summary>
+        </member>
+        <member name="T:Stripe.StripeRedirectFailureReason">
+            <summary>
+            An enum describing the reason for a failed redirect.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeRedirectFailureReason.Declined">
+            <summary>
+            Indicates that the authentication failed or the transaction was declined.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeRedirectFailureReason.ProcessingError">
+            <summary>
+            Indicates that the redirect failed due to a technical error.
+            </summary>
+        </member>
+        <member name="F:Stripe.StripeRedirectFailureReason.UserAbort">
+            <summary>
+            Indicates that the user aborted or dropped out of the redirect flow.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeConfiguration.HttpMessageHandler">
+            <summary>
+            This option allows you to provide your own HttpMessageHandler. Useful with Android/iPhone.
+            </summary>
+        </member>
+        <member name="P:Stripe.Stripe3DSecureCreateOptions.CardTokenOrCardId">
+            <summary>
+            If you pass a card id, you must also pass the customer id
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeAccountCreateOptions.Type">
+            <summary>
+            One of <see cref="T:Stripe.StripeAccountType"/>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeAccountLegalEntityOptions.Gender">
+            <summary>
+            The gender of the individual responsible for the account (International regulations require either “male” or “female”)
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeApplePayDomainCreateOptions.DomainName">
+            <summary>
+            Domain to add as an Apple Pay Domain
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.Amount">
+            <summary>
+            Amount to capture on the authorization
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.ApplicationFee">
+            <summary>
+            A fee in cents that will be applied to the charge and transferred to the application owner's Stripe account. To use an application fee, the request must be made on behalf of another account (using StripeRequestOptions available on all service methods), using the Stripe-Account header, an OAuth key, or the destination parameter. For more information, see the application fees documentation.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.Destination">
+            <summary>
+            ID of an existing, connected stripe account.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.DestinationAmount">
+            <summary>
+            The amount to transfer to the destination account without creating an Application Fee. Cannot be combined with the <see cref="P:Stripe.StripeChargeCaptureOptions.ApplicationFee" /> parameter. Must be equal to or lesser than the charge amount.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.ReceiptEmail">
+            <summary>
+            Email address that will receive an email receipt confirming the transaction.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCaptureOptions.StatementDescriptor">
+            <summary>
+            An arbitrary string to be displayed on your customer's credit card statement. This may
+            be up to 22 characters. As an example, if your website is <c>RunClub</c> and the item
+            you're charging for is a race ticket, you may want to specify a
+            <c>statement_descriptor</c> of <c>RunClub 5K race ticket</c>. The statement description
+            may not include <c>&lt;&gt;"'</c> characters, and will appear on your customer's
+            statement in capital letters. Non-ASCII characters are automatically stripped. While
+            most banks display this information consistently, some may display it incorrectly or not
+            at all.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a 0-decimal currency) representing how much to charge the card. The minimum amount is $0.50 US or equivalent in charge currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Currency">
+            <summary>
+            3-letter ISO code for currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.ApplicationFee">
+            <summary>
+            A fee in cents that will be applied to the charge and transferred to the application owner's Stripe account. To use an application fee, the request must be made on behalf of another account (using StripeRequestOptions available on all service methods), using the Stripe-Account header, an OAuth key, or the destination parameter. For more information, see the application fees documentation.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Capture">
+            <summary>
+            Whether or not to immediately capture the charge. When false, the charge issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured charges expire in 7 days. For more information, see authorizing charges and settling later.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Description">
+            <summary>
+            An arbitrary string which you can attach to a charge object. It is displayed when in the web interface alongside the charge. Note that if you use Stripe to send automatic email receipts to your customers, your receipt emails will include the description of the charge(s) that they are describing.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Destination">
+            <summary>
+            ID of an existing, connected stripe account.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.DestinationAmount">
+            <summary>
+            The amount to transfer to the destination account without creating an Application Fee. Cannot be combined with the <see cref="P:Stripe.StripeChargeCreateOptions.ApplicationFee" /> parameter. Must be equal to or lesser than the charge amount.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Level3">
+            <summary>
+            Extra information about the charge passing level III data to card networks
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.TransferGroup">
+            <summary>
+            A string that identifies this transaction as part of a group. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.OnBehalfOf">
+            <summary>
+            The Stripe account ID that these funds are intended for. Automatically set if you use the destination parameter. See the Connect documentation for details.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a charge object. It can be useful for storing additional information about the customer in a structured format. It's often a good idea to store an email address in metadata for tracking later.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.ReceiptEmail">
+            <summary>
+            The email address to send this charge's receipt to. The receipt will not be sent until the charge is paid. If this charge is for a customer, the email address specified here will override the customer's email address. Receipts will not be sent for test mode charges. If receipt_email is specified for a charge in live mode, a receipt will be sent regardless of your email settings.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.Shipping">
+            <summary>
+            Shipping information for the charge. Helps prevent fraud on charges for physical goods. For more information, see the Charge object documentation.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.CustomerId">
+            <summary>
+            The ID of an existing customer that will be charged in this request.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeCreateOptions.StatementDescriptor">
+            <summary>
+            An arbitrary string to be displayed on your customer's credit card statement. This may
+            be up to 22 characters. As an example, if your website is <c>RunClub</c> and the item
+            you're charging for is a race ticket, you may want to specify a
+            <c>statement_descriptor</c> of <c>RunClub 5K race ticket</c>. The statement description
+            may not include <c>&lt;&gt;"'</c> characters, and will appear on your customer's
+            statement in capital letters. Non-ASCII characters are automatically stripped. While
+            most banks display this information consistently, some may display it incorrectly or not
+            at all.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeChargeUpdateOptions.Shipping">
+            <summary>
+            Shipping information for the charge. Helps prevent fraud on charges for physical goods. For more information, see the Charge object documentation.
+            </summary>
+        </member>
+        <member name="T:Stripe.StripeDisputeListOptions">
+            <summary>
+            The optional arguments you can pass. <see href="https://stripe.com/docs/api#list_disputes">Stripe Documentation</see>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLinkCreateOptions.FileId">
+            <summary>
+            The ID of the file.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLinkSharedOptions.ExpiresAt">
+            <summary>
+            A future timestamp after which the link will no longer be usable.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeFileLinkSharedOptions.Metadata">
+            <summary>
+            Set of key-value pairs that you can attach to an object. This can be useful for storing
+            additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceCreateOptions.Billing">
+            <summary>
+            One of <see cref="T:Stripe.StripeBilling" />. When charging automatically, Stripe will attempt to pay this invoice using the default source attached to the customer. When sending an invoice, Stripe will email this invoice to the customer with payment instructions. Defaults to charge_automatically.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceCreateOptions.DaysUntilDue">
+            <summary>
+            The number of days from which the invoice is created until it is due. Only valid for invoices where billing=send_invoice.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceCreateOptions.DueDate">
+            <summary>
+            The date on which payment for this invoice is due. Only valid for invoices where billing=send_invoice.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceListOptions.Billing">
+            <summary>
+            The billing mode of the invoice to retrieve. One of <see cref="T:Stripe.StripeBilling" />.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceListOptions.DueDate">
+            <summary>
+            A filter on the list based on the object due_date field.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceListOptions.Paid">
+            <summary>
+            A filter on the list based on the object paid field.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeInvoiceUpdateOptions.Paid">
+            <summary>
+            Boolean representing whether an invoice is paid or not. To mark invoice as paid, pass true. Only applies to invoices where billing=send_invoice.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeUpcomingInvoiceOptions.SubscriptionBillingCycleAnchor">
+            <summary>
+            A future date to anchor the subscription’s <see href="https://stripe.com/docs/subscriptions/billing-cycle">billing cycle</see>. This is used to determine the date of the first full invoice, and, for plans with <c>month</c> or <c>year</c> intervals, the day of the month for subsequent invoices.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Currency">
+            <summary>
+            REQUIRED: Three-letter ISO currency code, in lowercase. Must be a supported currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Coupon">
+            <summary>
+            A coupon code that represents a discount to be applied to this order. Must be one-time duration and in tbe same currency as the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.CustomerId">
+            <summary>
+            The ID of an existing customer to use for this order. If provided, the customer email and shipping address will be used to create the order. Subsequently, the customer will also be charged to pay the order. If email or shipping are also provided, they will override the values retrieved from the customer object.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Email">
+            <summary>
+            The email address of the customer placing the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Items">
+            <summary>
+            List of items constituting the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to an order object. It can be useful for storing additional information about the order in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderCreateOptions.Shipping">
+            <summary>
+            Shipping address for the order. Required if any of the SKUs are for products that have shippable set to true.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItemOptions.Parent">
+            <summary>
+            The ID of the SKU being ordered.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderItemOptions.Quantity">
+            <summary>
+            The quantity of this order item. When type is sku, this is the number of instances of the SKU to be ordered.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderListOptions.Customer">
+            <summary>
+            Only return orders for the given customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderListOptions.Ids">
+            <summary>
+            Only return orders with the given IDs.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderListOptions.Status">
+            <summary>
+            Only return orders that have the given status. One of created, paid, fulfilled, or refunded.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderListOptions.StatusTransitions">
+            <summary>
+            Only return orders that match the given status_transitions. One of canceled, fulfilled, paid or returned.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderListOptions.UpstreamIds">
+            <summary>
+            Only return orders with the given upstream order IDs.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderPayOptions.CustomerId">
+            <summary>
+            The ID of an existing customer that will be charged in this request.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderPayOptions.SourceId">
+            <summary>
+            A payment source to be charged, such as a credit card. If you also pass a customer ID, the source must be the ID of a source belonging to the customer. Otherwise, if you do not pass a customer ID, the source you provide must either be a token, like the ones returned by Stripe.js.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderPayOptions.ApplicationFee">
+            <summary>
+            A fee in cents that will be applied to the order and transferred to the application owner's Stripe account. To use an application fee, the request must be made on behalf of another account, using the Stripe-Account header or OAuth key. For more information, see the application fees documentation.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderPayOptions.Email">
+            <summary>
+            The email address of the customer placing the order. If a customer is specified, that customer's email address will be used.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderPayOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to an order object. It can be useful for storing additional information about the order in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.Coupon">
+            <summary>
+            A coupon code that represents a discount to be applied to this order. Must be one-time duration and in tbe same currency as the order.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to an order object. It can be useful for storing additional information about the order in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.SelectedShippingMethod">
+            <summary>
+            The shipping method to select for fulfilling this order. If specified, must be one of the ids of a shipping method in the shipping_methods array. If specified, will overwrite the existing selected shipping method, updating items as necessary.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.ShippingCarrier">
+            <summary>
+            The name of the carrier like USPS, UPS, or FedEx. ShippingTrackingNumber must also be set with this property.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.ShippingTrackingNumber">
+            <summary>
+            The tracking number provided by the carrier. ShippingCarrier must also be set with this property.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeOrderUpdateOptions.Status">
+            <summary>
+            Current order status. One of created, paid, canceled, fulfilled, or returned.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripePayoutCreateOptions.Amount">
+            <summary>
+            REQUIRED
+            </summary>
+        </member>
+        <member name="P:Stripe.StripePayoutCreateOptions.Currency">
+            <summary>
+            REQUIRED
+            </summary>
+        </member>
+        <member name="P:Stripe.StripePlanListOptions.ProductId">
+            <summary>
+            Only return plans for the given product.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductCreateOptions.Id">
+            <summary>
+            The identifier for the product. Must be unique. If not provided, an identifier will be randomly generated.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductCreateOptions.Type">
+            <summary>
+            The type of the product. Either 'service' or 'good'.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Active">
+            <summary>
+            Whether or not the product is currently available for purchase. Defaults to true.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Attributes">
+            <summary>
+            A list of up to 5 alphanumeric attributes that each SKU can provide values for (e.g. ["color", "size"]).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Caption">
+            <summary>
+            A short one-line description of the product, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.DeactivateOn">
+            <summary>
+            An array of Connect application names or identifiers that should not be able to order the SKUs for this product.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Description">
+            <summary>
+            The product’s description, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Images">
+            <summary>
+            A list of up to 8 URLs of images for this product, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a product object. It can be useful for storing additional information about the product in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Name">
+            <summary>
+            REQUIRED: The product’s name, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.PackageDimensions">
+            <summary>
+            The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own package_dimensions.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Shippable">
+            <summary>
+            Whether this product is shipped (i.e. physical goods). Defaults to true.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.StatementDescriptor">
+            <summary>
+            What appears on the customers credit card statement.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeProductSharedOptions.Url">
+            <summary>
+            A URL of a publicly-accessible webpage for this product.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuCreateOptions.Id">
+            <summary>
+            The identifier for the SKU. Must be unique. If not provided, an identifier will be randomly generated.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Active">
+            <summary>
+            Whether or not the SKU is currently available for purchase. Defaults to true.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Attributes">
+            <summary>
+            A dictionary of attributes and values for the attributes defined by the product. If, for example, a product’s attributes are ["size", "gender"], a valid SKU has the following dictionary of attributes: {"size": "Medium", "gender": "Unisex"}.
+            This dictionary encoding is handled in a custom parser in DictionaryPlugin.cs
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Currency">
+            <summary>
+            Three-letter ISO currency code, in lowercase. Must be a supported currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.image">
+            <summary>
+            The URL of an image for this SKU, meant to be displayable to the customer.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Inventory">
+            <summary>
+            Description of the SKU’s inventory.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Metadata">
+            <summary>
+            Set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.PackageDimensions">
+            <summary>
+            The dimensions of this SKU for shipping purposes.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Price">
+            <summary>
+            The cost of the item as a positive integer in the smallest currency unit (that is, 100 cents to charge $1.00, or 100 to charge ¥100, Japanese Yen being a 0-decimal currency).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSkuSharedOptions.Product">
+            <summary>
+            The ID of the product this SKU is associated with. The product must be currently active.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceAttachOptions.Source">
+            <summary>
+            REQUIRED: The identifier of the source to be attached.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Type">
+            <summary>
+            REQUIRED: The type of the source to create. One of type <see cref="T:Stripe.StripeSourceType"/>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Amount">
+            <summary>
+            Amount associated with the source. This is the amount for which the source will be chargeable once ready. Required for single-use sources.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Currency">
+            <summary>
+            The currency associated with the source. This is the currency for which the source will be chargeable once ready.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Customer">
+            <summary>
+            The customer associated with the Source that you are trying to share with a Connected account.
+            This only works with Stripe Connect as documented here: https://stripe.com/docs/sources/connect#shared-card-sources
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Flow">
+            <summary>
+            The authentication flow of the source to create. Flow is one of <see cref="T:Stripe.StripeSourceFlow" />. It is generally inferred unless a type supports multiple flows.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.IssuingCardId">
+            <summary>
+            This parameter is used to create a Source from an issuing card mostly in Test mode.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Mandate">
+            <summary>
+            Information about a mandate possiblity attached to a source object (generally for bank debits) as well as its acceptance status.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a source object. It can be useful for storing additional information about the source in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.OriginalSource">
+            <summary>
+            The id of the Source that you are trying to share with a Connected account.
+            This only works with Stripe Connect as documented here: https://stripe.com/docs/sources/connect#shared-card-sources
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Owner">
+            <summary>
+            Information about the owner of the payment instrument that may be used or required by particular source types.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.RedirectReturnUrl">
+            <summary>
+            <para>Parameters required for the redirect flow. Required if the source is authenticated by a redirect (flow is redirect).</para>
+            <para>The URL you provide to redirect the customer back to you after they authenticated their payment. It can use your application URI scheme in the context of a mobile application.</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Receiver">
+            <summary>
+            Optional parameters for the receiver flow. Can be set only if the source is a receiver.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Token">
+            <summary>
+            An optional token used to create the source. When passed, token properties will override source parameters.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceCreateOptions.Usage">
+            <summary>
+            One of <see cref="T:Stripe.StripeSourceUsage" />. Whether this source should be reusable or not. Some source types may or may not be reusable by construction, while other may leave the option at creation. If an incompatible value is passed, an error will be returned.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceUpdateOptions.Mandate">
+            <summary>
+            Information about a mandate possiblity attached to a source object (generally for bank debits) as well as its acceptance status.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceUpdateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a source object. It can be useful for storing additional information about the source in a structured format. You can unset individual keys if you POST an empty value for that key. You can clear all keys if you POST an empty value for metadata.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceUpdateOptions.Owner">
+            <summary>
+            Information about the owner of the payment instrument that may be used or required by particular source types.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSourceUpdateOptions.Card">
+            <summary>
+            Properties that can be updated on a Card Source.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeListOptions.Limit">
+            <summary>
+            A limit on the number of objects to be returned. Limit can range between 1 and 100 items.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeListOptions.StartingAfter">
+            <summary>
+            A cursor for use in pagination. starting_after is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, ending with obj_foo, your subsequent call can include starting_after=obj_foo in order to fetch the next page of the list.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeListOptions.EndingBefore">
+            <summary>
+            A cursor for use in pagination. ending_before is an object ID that defines your place in the list. For instance, if you make a list request and receive 100 objects, starting with obj_bar, your subsequent call can include ending_before=obj_bar in order to fetch the previous page of the list.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemCreateOptions.SubscriptionId">
+            <summary>
+            REQUIRED: The identifier of the subscription to modify.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemListOptions.SubscriptionId">
+            <summary>
+            REQUIRED: The ID of the subscription whose items will be retrieved.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionItemSharedOptions.PlanId">
+            <summary>
+            REQUIRED: The identifier of the plan to add to the subscription.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionItemSharedOptions.Prorate">
+            <summary>
+            Flag indicating whether to prorate switching plans during a billing cycle.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionItemSharedOptions.ProrationDate">
+            <summary>
+            If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply the same proration that was previewed with the upcoming invoice endpoint.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionItemSharedOptions.Quantity">
+            <summary>
+            The quantity you’d like to apply to the subscription item you’re creating.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionCreateOptions.BillingCycleAnchor">
+            <summary>
+            A future date to anchor the subscription’s <see href="https://stripe.com/docs/subscriptions/billing-cycle">billing cycle</see>. This is used to determine the date of the first full invoice, and, for plans with <c>month</c> or <c>year</c> intervals, the day of the month for subsequent invoices.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionCreateOptions.CustomerId">
+            <summary>
+            REQUIRED: The identifier of the customer to subscribe.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionCreateOptions.Items">
+            <summary>
+            List of subscription items, each with an attached plan.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionCreateOptions.TrialPeriodDays">
+            <summary>
+            Integer representing the number of trial period days before the customer is charged for the first time.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemOption.PlanId">
+            <summary>
+            Plan ID for this item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemOption.Quantity">
+            <summary>
+            Quantity for this item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.Id">
+            <summary>
+            SubscriptionItem to update.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.ClearUsage">
+            <summary>
+            Delete all usage for a given subscription item. Only allowed when <c>deleted</c> is set to true and the current plan’s <c>usage_type</c> is metered.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.Deleted">
+            <summary>
+            Delete the specified item if set to true.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to an object. It can be useful for storing additional information about the object in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.PlanId">
+            <summary>
+            Plan ID for this item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionItemUpdateOption.Quantity">
+            <summary>
+            Quantity for this item.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionListOptions.Billing">
+            <summary>
+            The billing mode of the subscriptions to retrieve. One of <see cref="T:Stripe.StripeBilling" />.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionListOptions.CustomerId">
+            <summary>
+            The ID of the customer whose subscriptions will be retrieved.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionListOptions.PlanId">
+            <summary>
+            The ID of the plan whose subscriptions will be retrieved.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionListOptions.Status">
+            <summary>
+            The status of the subscriptions to retrieve. One of <see cref="T:Stripe.StripeSubscriptionStatuses"/> or <c>all</c>. Passing in a value of <c>canceled</c> will return all canceled subscriptions, including those belonging to deleted customers. Passing in a value of <c>all</c> will return subscriptions of all statuses.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionUpdateOptions.CancelAtPeriodEnd">
+            <summary>
+            If set, the proration will be calculated as though the subscription was updated at the given time. This can be used to apply exactly the same proration that was previewed with <see href="https://stripe.com/docs/api#upcoming_invoice">upcoming invoice</see> endpoint. It can also be used to implement custom proration logic, such as prorating by day instead of by second, by providing the time that you wish to use for proration calculations.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionUpdateOptions.Items">
+            <summary>
+            List of subscription items, each with an attached plan.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeSubscriptionUpdateOptions.ProrationDate">
+            <summary>
+            Boolean indicating whether this subscription should cancel at the end of the current period.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.ApplicationFeePercent">
+            <summary>
+            A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice subtotal that will be transferred to the application owner’s Stripe account. The request must be made with an OAuth key in order to set an application fee percentage. For more information, see the application fees <see href="https://stripe.com/docs/connect/subscriptions#collecting-fees-on-subscriptions">documentation</see>.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.Billing">
+            <summary>
+            One of <see cref="T:Stripe.StripeBilling" />. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions. Defaults to <c>charge_automatically</c>.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.CouponId">
+            <summary>
+            The code of the coupon to apply to this subscription. A coupon applied to a subscription will only affect invoices created for that particular subscription.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.DaysUntilDue">
+            <summary>
+            Number of days a customer has to pay invoices generated by this subscription. Only valid for subscriptions where <c>billing=send_invoice</c>.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a subscription object. It can be useful for storing additional information about the subscription in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.Prorate">
+            <summary>
+            Boolean (default <c>true</c>). Use with a <c>billing_cycle_anchor</c> timestamp to determine whether the customer will be invoiced a prorated amount until the anchor date. If <c>false</c>, the anchor period will be free (similar to a trial).
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.Source">
+            <summary>
+            ID of a Token or a Source, as returned by
+            <see href="https://stripe.com/docs/elements">Elements</see>. You must provide a source
+            if the customer does not already have a valid source attached, and you are subscribing
+            the customer to be charged automatically for a plan that is not free. Passing
+            <c>source</c> will create a new source object, make it the customer default source, and
+            delete the old customer default if one exists. If you want to add an additional source,
+            instead use the
+            <see href="https://stripe.com/docs/api#create_card">card creation API</see> to add the
+            card and then the <see href="https://stripe.com/docs/api#update_customer">customer
+            update API</see> to set it as the default. Whenever you attach a card to a customer,
+            Stripe will automatically validate the card.
+            <para>If you use Source, you cannot use SourceCard also.</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.SourceCard">
+            <summary>
+            <see cref="P:Stripe.SubscriptionSharedOptions.SourceCard"/> instance containing a user’s credit card details. You must
+            provide a source if the customer does not already have a valid source attached, and you
+            are subscribing the customer to be charged automatically for a plan that is not free.
+            Passing <c>source</c> will create a new source object, make it the customer default
+            source, and delete the old customer default if one exists. If you want to add an
+            additional source, instead use the
+            <see href="https://stripe.com/docs/api#create_card">card creation API</see> to add the
+            card and then the <see href="https://stripe.com/docs/api#update_customer">customer
+            update API</see> to set it as the default. Whenever you attach a card to a customer,
+            Stripe will automatically validate the card.
+            <para>If you use SourceCard, you cannot use Source also.</para>
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.TaxPercent">
+            <summary>
+            A non-negative decimal (with at most four decimal places) between 0 and 100. This represents the percentage of the subscription invoice subtotal that will be calculated and added as tax to the final amount each billing period. For example, a plan which charges $10/month with a <c>tax_percent</c> of 20.0 will charge $12 per invoice.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.TrialEnd">
+            <summary>
+            Date representing the end of the trial period the customer will get before being charged for the first time. Set <see cref="P:Stripe.SubscriptionSharedOptions.EndTrialNow"/> to <c>true</c> to end the customer’s trial immediately.
+            </summary>
+        </member>
+        <member name="P:Stripe.SubscriptionSharedOptions.TrialFromPlan">
+            <summary>
+            Boolean. Decide whether to use the default trial on the plan when creating a subscription.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.Amount">
+            <summary>
+            A positive integer in the smallest currency unit (e.g., 100 cents to top up $1.00 or 100 to top up ¥100, a 0-decimal currency) representing how much to top up your Stripe balance.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.Currency">
+            <summary>
+            3-letter ISO code for currency.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.Description">
+            <summary>
+            An arbitrary string which you can attach to a Top-up object. It is displayed when in the web interface alongside the Top-up.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a Top-up object. It can be useful for storing additional information in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.SourceId">
+            <summary>
+            The ID of a source to transfer funds from. For most users, this should be left
+            unspecified which will use the bank account that was set up in the dashboard for the
+            specified currency. In test mode, this can be a test bank token (see
+            <see href="https://stripe.com/docs/connect/testing#testing-top-ups">Testing
+            Top-ups</see>).
+            </summary>
+        </member>
+        <member name="P:Stripe.StripeTopupCreateOptions.StatementDescriptor">
+            <summary>
+            Extra information about a top-up for the source’s bank statement. Limited to 15 ASCII
+            characters.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.Object">
+            <summary>
+            The type of payment source. Should be "card".
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressCity">
+            <summary>
+            City/District/Suburb/Town/Village.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressCountry">
+            <summary>
+            Billing address country, if provided when creating card.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressLine1">
+            <summary>
+            Address line 1 (Street address/PO Box/Company name).
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressLine2">
+            <summary>
+            Address line 2 (Apartment/Suite/Unit/Building).
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressState">
+            <summary>
+            State/County/Province/Region.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.AddressZip">
+            <summary>
+            Zip/Postal Code.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.Cvc">
+            <summary>
+            USUALLY REQUIRED: Card security code. Highly recommended to always include this value, but it's only required for accounts based in European countries.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.ExpirationMonth">
+            <summary>
+            REQUIRED: Two digit number representing the card's expiration month.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.ExpirationYear">
+            <summary>
+            REQUIRED: Two or four digit number representing the card's expiration year.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.Metadata">
+            <summary>
+            A set of key/value pairs that you can attach to a card object. It can be useful for storing additional information about the card in a structured format.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.Name">
+            <summary>
+            Cardholder's full name.
+            </summary>
+        </member>
+        <member name="P:Stripe.SourceCard.Number">
+            <summary>
+            REQUIRED: The card number, as a string without any separators.
+            </summary>
+        </member>
+    </members>
+</doc>

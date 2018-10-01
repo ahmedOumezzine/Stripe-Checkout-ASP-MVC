@@ -1,0 +1,10 @@
+﻿<form action="StripeCheckout/Charge" method="POST">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="@ViewBag.StripePublishKey"
+            data-amount="500"
+            data-name="Stripe.com"
+            data-description="Sample Charge"
+            data-locale="auto"
+            data-zip-code="true">
+    </script>
+</form>

@@ -56,5 +56,29 @@ namespace StripeCheckoutDemo.Controllers
                 return View("error");
             }
         }
+
+
+
+        [HttpPost]
+        public ActionResult Charge2(string stripeToken, string stripeEmail)
+        {
+            var customers = new StripeCustomerService();
+            var charges = new StripeChargeService();
+            //# GET CUSTOMER ON FILE
+
+            //CREATE NEW CARD THAT WAS JUST INPUTTED USING THE TOKEN
+            StripeCustomerUpdateOptions stripeCustomerUpdateOptions = new StripeCustomerUpdateOptions();
+            stripeCustomerUpdateOptions.SourceCard = new SourceCard()
+            {
+                Number = "6011111111111117",
+                Cvc = "222",
+                ExpirationYear=2022,
+                ExpirationMonth=2
+            };
+           var re= customers.Update("cus_F50RORXeOH9pz4", stripeCustomerUpdateOptions);
+
+            return View();
+        }
+
     }
 }

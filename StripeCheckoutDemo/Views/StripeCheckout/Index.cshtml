@@ -8,3 +8,20 @@
             data-zip-code="true">
     </script>
 </form>
+
+
+<div class="row">
+    <div class="container col-md-2 col-md-offset-5">
+        <h5>Upgrade your account</h5>
+        <form action="StripeCheckout/Charge2" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="@ViewBag.StripePublishKey"
+                  data-panel-label='Change Card'
+        data-label='Change Card'
+        data-name='Change Card'
+        data-description='Change your card'
+        data-billing-address='false'>
+            </script>
+        </form>
+    </div>
+</div>
